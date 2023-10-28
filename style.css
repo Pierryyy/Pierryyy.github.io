@@ -1,64 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    color: white;
+    font-family: 'Karla', sans-serif;
 }
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-image: url('https://64.media.tumblr.com/9ecdd196c3afa627500e0f14d8cda381/5edd8ab15618d7e8-37/s400x600/8a9c1c9f6c1346b6a566e556e1c64e2fd13c558b.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; /* Importante para sobreposição */
+}
+
+body::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5); /* Cor escura semi-transparente (ajuste o valor alpha para escurecer mais ou menos) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1; 
+}
+
+
+
+h4 {
+    font-size: calc(1.275rem + .3vw);
+    padding-top: 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
 }
+
 .foto {
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .foto-perfil {
     box-sizing: border-box;
     border-radius: 50%;
-    border: 2px solid #BB99DD;
-    padding: 3px;
-    width: 200px;
+    border: 4px solid white;
+    max-width: 130px;
 }
+
 .insta {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 500;
+    font-size: 14px;
     text-align: center;
-    color: #BB99DD;
-    margin: 10px;
+    color: white;
+    margin: 6px;
 }
+
 .text {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: #BB99DD;
     text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.807);
 }
+
 .box {
     box-sizing: border-box;
-    border: 2px solid #BB99DD;
-    border-radius: 4px;
-    width: 326px;
+    border: 2px solid #3b0273;
+    border-radius: 15px;
     height: 49px;
     margin: 12px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Adicione uma transição suave */
 }
+
+.box:hover {
+    background-color: #3b0273;
+    color: white;
+}
+
+.box:hover .bi {
+    color: white;
+}
+
+
+
 footer {
     display: flex;
     justify-content: center;
     padding: 5px;
 }
+
 .social {
     padding: 12px;
 }
