@@ -98,9 +98,5 @@ main {
 footer {
     display: flex;
     justify-content: center;
-    padding: 5px;
 }
 
-.social {
-    padding: 12px;
-}
