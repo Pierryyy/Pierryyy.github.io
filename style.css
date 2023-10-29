@@ -13,7 +13,17 @@ body {
     background-position: center; /* Centralize a imagem do fundo */
     position: relative; /* Importante para sobreposição */
     height: 100vh; /* Defina a altura do body para 100% da janela visível */
-    overflow: hidden; /* Evita que a barra de rolagem apareça */
+    overflow-y: scroll; /* Adicione uma barra de rolagem vertical */
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Adicione uma sombra para dar a ilusão de uma barra de rolagem invisível */
+body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
 }
 
 body::before {
@@ -37,7 +47,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
 }
 
 .foto {
@@ -78,7 +87,7 @@ main {
     box-sizing: border-box;
     border: 2px solid #3b0273;
     border-radius: 15px;
-    height: 49px;
+    min-height: 49px;
     margin: 12px;
     transition: background-color 0.3s, color 0.3s;
     /* Adicione uma transição suave */
